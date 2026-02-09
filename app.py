@@ -1,3 +1,6 @@
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+
 import streamlit as st
 import numpy as np
 import tensorflow as tf
@@ -60,3 +63,4 @@ elif pred_prob > 0.4:
     st.warning("Medium churn risk")
 else:
     st.success("Low churn risk")
+
