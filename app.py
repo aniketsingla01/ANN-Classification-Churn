@@ -21,7 +21,7 @@ with open('sc.pkl', 'rb') as file:
 
 
 ## streamlit app
-st.title('Customer Churn PRediction')
+st.title('Customer Churn Prediction')
 
 geography = st.selectbox('Geography', oe.categories_[0])
 gender = st.selectbox('Gender', le.classes_)
@@ -63,4 +63,5 @@ elif pred_prob > 0.4:
     st.warning("Medium churn risk")
 else:
     st.success("Low churn risk")
+
 
