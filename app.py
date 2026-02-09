@@ -54,7 +54,9 @@ pred_prob = prediction[0][0]
 
 st.write(f'Churn Probability: {pred_prob:.2f}')
 
-if pred_prob > 0.5:
-    st.write('The customer is likely to churn.')
+if pred_prob > 0.7:
+    st.error("High churn risk")
+elif pred_prob > 0.4:
+    st.warning("Medium churn risk")
 else:
-    st.write('The customer is not likely to churn.')
+    st.success("Low churn risk")
